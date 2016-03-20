@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Adams page</title>
+    <!--Normalize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/static/css/style1.css">
+  </head>
+  <body>
+    <div class="wrapper">
+    <h1>Not colored!!</h1>
+    {% for user in users %}
+    <div class="row">
+      <h1>User: {{ user.name }}</h1>
+      <ul>
+	 <li>id: {{ user.id }}</li>
+      </ul>
+   
+      <h2>Roles:</h2>
+      <table class="table table-striped">
+	<tbody>
+	{% for role in user.roles %}
+	<tr>
+	  <td {% if loop.index== 2 %}class="success"{% endif %}> {{ loop.index }} adsf {{ role }} </td>
+	</tr>
+	{% endfor %}
+      </tbody>
+     </table>
+    </div>
+    {% endfor %}
+  </body>
+</html>

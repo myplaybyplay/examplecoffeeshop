@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Adams page</title>
+    <link rel="stylesheet" text ="text/css" href="static/css/style.css"/>
+  </head>
+  <body>
+    <h1>Not colored!!</h1>
+    {% for user in users %}
+    <div class="user">
+      <h1>User: {{ user.name }}</h1>
+      <ul class="user-id">
+	 <li>id: {{ user.id }}</li>
+      </ul>
+   
+      <h2 class="user">Roles:</h2>
+      <ul>
+	{% for role in user.roles %}
+	<li> {{ role }} </li>
+	{% endfor %}
+      </ul>
+      
+    </div>
+    {% endfor %}
+  </body>
+</html>

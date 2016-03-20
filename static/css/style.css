@@ -1,0 +1,28 @@
+/*  
+aqua marine : #468966
+cream: #FFF0A5
+orange: #FFB03B
+pale red: #B64926
+dark red: #8E2800
+*/
+
+.user {
+    background: #ccc;
+    width: 60%;
+    margin: 10px auto;
+    border: 2px solid #468966;
+
+}
+	
+
+.user h1 {
+    color : #8E2800;
+    text-align: center;
+}
+
+.user .user-id li {
+  list-style: none;
+  border-bottom: 3px solid #FFB03B;
+}
+
+
